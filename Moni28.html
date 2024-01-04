@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid and object fit, position, filter</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            /*  grid-template-columns: 132px 132px 132px; */
+            /*  grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(auto-fit,minmax(200px, 400px)); */
+            /* justify-content: center;
+    align-items: center;*/
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+
+        }
+
+        .box {
+            border: 2px solid palevioletred;
+            background-color: rgb(76, 250, 201);
+            padding: 20px;
+
+        }
+
+        #navbar {
+            grid-area: navbar;
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        /*Object Fit and Position*/
+
+        .bucket {
+            height: 400px;
+            width: 300px;
+            background-color: yellowgreen;
+            border: 4px solid maroon;
+
+        }
+
+        img {
+            height: 400px;
+            width: 300px;
+            /*    object-fit: cover;         */
+            /*It will cover the whole box and crop the image*/
+            /*    object-fit: contain;     */
+            /*It will not crop image and fit in box */
+            /*    object-position: bottom right;  */
+            object-fit: fill;
+            object-fit: scale-down;
+            object-position: 10px 20px;
+        
+
+        }
+
+        .img1{
+        /*    filter:blur(10px);  */
+            filter:brightness(100%);
+            filter:hue-rotate(20deg);
+        }
+
+        .img2{
+           /* filter: contrast(200%);*/
+           /* filter: drop-shadow(16px 17px 20px blue);*/
+            filter: opacity(0.5);
+        }
+
+        .bucket2 {
+            height: 400px;
+            width: 300px;
+            /*    background-color: yellowgreen;  */
+
+            background-image: url("img/GymLogo.jpg");
+            border: 4px solid maroon;
+            /*   align-self: center; */
+            /*   object-position: 10px 20px;*/
+            /*   object-position: top right;*/
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .bucket3 {
+            height: 400px;
+            width: 300px;
+            background-color: yellowgreen;
+            border: 4px solid maroon;
+            margin-left: 500px;
+
+        }
+
+        .flex {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar" class="box">
+            Home About Contact Us
+        </div>
+
+        <div id="section" class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit porro, perferendis
+            exercitationem inventore maxime iusto possimus doloribus! A, excepturi ad!</div>
+        <div id="aside" class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, facere!</div>
+        <footer class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat nulla modi minus?</footer>
+        <!--<div class="box">Item3</div>
+        <div class="box">Item4</div>
+        <div class="box">Item5</div>
+        <div class="box">Item6</div>
+        <div class="box">Item7</div>
+        <div class="box">Item8</div>
+        <div class="box">Item9</div>
+        <div class="box">Item10</div>
+        <div class="box">Item11</div>  -->
+
+    </div>
+
+    <div class="flex">
+
+        <div class="bucket">
+            <img  class="img2" src="GymLogo.jpg" alt="">
+        </div>
+
+        <div class="bucket2">
+            <!--    <img src="img/GymLogo.jpg" alt=""> -->
+
+            <div class="bucket3 ">
+
+                <img class="img1" src="GymLogo.jpg" alt="">
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

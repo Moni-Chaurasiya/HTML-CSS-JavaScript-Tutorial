@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Float and Clear</title>
+    <style>
+       h1{
+        background-color: yellowgreen;
+        color: black;
+        font-weight: bold;
+        text-align:center;
+        border: 3px solid brown;
+       }
+
+/* If p is contained by any li which is contained by div */
+
+      /* div li p{
+        color: rgb(221, 221, 3);
+        background-color: black;
+        border: 2px solid red;
+       }  */
+
+/* if p is right inside div then this CSS will be applied */
+
+      /* div > p{
+        color: rgb(221, 221, 3);
+        background-color: black;
+        border: 2px solid red;
+       }  */
+
+/* if p is right after div i.e p is the next sibling of div */       
+
+       div + p{
+        color: rgb(221, 221, 3);
+        background-color: black;
+        border: 2px solid rgb(250, 150, 150);
+       } 
+
+       .cards{
+          background-color: pink;
+          display:flow-root;
+          
+          border:2px solid blu;
+
+       }
+       img{
+        float:right;
+       }
+       .card{
+          background-color: greenyellow;
+          border:2px solid maroon;
+       }
+       .card:nth-child(3){
+          clear:right;
+          background-color: aqua;
+       }
+
+
+    </style>
+</head>
+<body>
+    <h1>This is more on selecter</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item"><p>This is another paragraph inside li</p></li>
+                <li> This will not get affected </li>
+                <li class="item"></li>
+                <li class="item"></li>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p> This is another paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+
+    <!--Float-->
+
+  <div class="cards">
+    <img src=" GymLogo.jpg " alt="" width="230">
+    <div class="card">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aliquam sint doloremque! Atque hic nam, provident blanditiis esse doloribus, perferendis quae numquam accusamus fugit architecto, eligendi officiis dignissimos nostrum rem?</p>
+
+    </div>
+    <div class="card"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab minima corporis, repudiandae ducimus nesciunt, ipsam odit vel beatae voluptas error nostrum. Consectetur quibusdam rem repudiandae optio blanditiis, nulla a similique eveniet id libero hic ut vel animi veritatis eos, dolore fuga illo laboriosam. Nostrum voluptates nemo, porro voluptatibus commodi unde?</div>
+    <div> card3</div>
+  </div>
+</body>
+</html>

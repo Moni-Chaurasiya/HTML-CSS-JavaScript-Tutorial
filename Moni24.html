@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes and Animations</title>
+</head>
+<style>
+    .container {
+
+        background-color: rgb(47, 231, 255);
+
+    }
+
+    .box {
+        background-color: greenyellow;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        animation-name: moni;
+        animation-duration: 2s;
+        animation-iteration-count: 3;
+        /* we can give it to (infinite) also*/
+        /*  animation-fill-mode:forwards ;*/
+        /*  After animation it will stop at 1000px */
+        animation-fill-mode: alternate;
+        /* After animation it will come at 200px*/
+        animation-timing-function: ease-in;
+        /*(ease-out, ease-in-out)*/
+        animation-delay: 2s;
+       /* animation-direction: reverse;*/
+
+       /*This properties can be set using this shorthand*/
+       /* animation: animation-name animation-duration animation-timing-function animation-delay
+       animation-iteration-count animation-fill-mode; */
+ /*  animation: moni 2s ease-in 2s 3 alternate;  */
+       /* animation-play-state:paused;*/
+    }
+
+    @keyframes moni{
+        0% {
+            top: 0px;
+            left: 0px;
+        }
+
+        25% {
+            top: 250px;
+            left: 0px;
+        }
+
+        75% {
+            top: 250px;
+            left: 250px;
+        }
+
+        100% {
+            top: 0px;
+            left: 250px;
+        }
+    }
+
+  /*  @keyframes moni {
+        from {
+            width: 200px;
+        }
+
+        to {
+            width: 1000px;
+        }
+    }*/
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+</body>
+
+</html>

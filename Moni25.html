@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Effects</title>
+    <style>
+        body{
+            background-color: black;
+        }
+#box{
+    display:flex;
+    height:200px;
+    width:200px;
+    background-color: salmon;
+    justify-content: center;
+    align-items: center;
+    transition-property: background-color;
+    transition-duration: 3s;
+    transition-timing-function: ease-in; /*(ease-in ---> start slowly, ease-out ---> end slowly,
+     ease-in-out ---> start and end slowly )*/
+     transition-delay: 2s;
+     /* transtion short hand property in one line */
+     /*transition: background-color  transition-duration   ease-in-out    transition-delay*/
+     transition: background-color 3s ease-in-out .2s;
+}
+#box:hover{
+    background-color: skyblue;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    font-size: 30px;
+}
+    </style>
+</head>
+<body>
+    <h3>This is CSS transitions</h3>
+    <div class="container">
+         <div id="box">
+            This is my box
+         </div>
+    </div>
+</body>
+</html>

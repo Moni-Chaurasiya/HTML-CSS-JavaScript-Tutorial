@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .container {
+            height:250px;
+            width: 1000px;
+            border: 2px solid black;
+            /* Initialize the container as a flex box */
+            display: flex;
+
+            /* Flex properties for flex container */
+
+           /* flex-direction: column;
+            flex-direction: row;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse; */
+           flex-direction: row; /*(Default value is row)*/
+
+           flex-wrap: wrap; /*(Default value is no-wrap means box will not shift to next row)*/
+          /* flex-wrap:wrap-reverse; */
+                    /* OR */
+           /*flex-flow: row-reverse wrap;*/
+
+           /*Justfy-contant will justify the content in horizontal direction*/
+           justify-content: center;
+           justify-content: space-between; /*Space between box only*/
+           justify-content: space-evenly; /*equaly space between each box including starting and ending*/
+           justify-content: space-around; /* Give equal space to each box around */
+
+           /*Justify-content will justify the content in horizontal direction */
+           align-items: center;
+           align-items: flex-end;
+           align-items: stretch;
+        }
+        
+        .item{
+            width:100px;
+            height:100px;
+            background-color: tomato;
+            padding: 2px;
+            margin: 3px;
+            border: 2px solid skyblue;
+        }
+
+        #item1{
+            /* Flex propertie for a flex item*/
+            /*Higer the order, later it shows up in the container*/
+            order: 2;
+            /* Flex-grow will take the place of 2 box */
+            flex-grow: 2;
+        }
+        #item2{
+            flex-grow: 3;
+        flex-shrink:4;/*Box 2 will change their width faster than other boxes when we change size of page*/
+
+        }
+        #item3{
+             flex-basis: 250px;
+             /*when flex direction is set to row flex-basis: will control width*/
+             /* when flex direction is set to column sflex-basis: will control width*/ 
+            order: 40;
+        }
+        #item4{
+            flex:2 2 230;
+            align-self: center;
+            align-self:self-end;
+           /* align-self:self-start;*/
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- FlexBox is a one dimentional layout method for laying out items in rows or columns. -->
+    <!-- CSS flexbox is a better way to align items into a container. -->
+    <!-- Flexbox = flexible + box -->
+
+    <h1>This is a FlexBox</h1>
+    <div class="container">
+        <div class="item" id="item1">First Box</div>
+        <div class="item" id="item2">Second Box</div>
+        <div class="item" id="item3">Third Box</div>
+        <div class="item" id="item4">Fourth Box</div>
+        <div class="item" id="item5">Fifth Box</div>
+        <div class="item" id="item6">Sixth Box</div>
+    </div>
+</body>
+
+</html>

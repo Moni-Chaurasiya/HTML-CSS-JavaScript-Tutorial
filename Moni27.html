@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid</title>
+    <style>
+        .container{
+            display:grid;
+        /*   grid-template-columns: [pehla]300px [doosra]100px [tisra]100px;  */
+        /*  grid-template-columns: 300px auto 100px;  */
+        /*  grid-template-columns: 1fr 1fr 4fr;       */ 
+            grid-template-columns: repeat(4, auto);   
+        /*  grid-template-rows: 1fr 2fr 4fr;          */
+           grid-template-rows: repeat(3, auto); 
+        /*    grid-auto-rows: 2fr;
+            grid-gap: 1rem;
+        /*  justify-content: center;                  */
+            border:2px solid maroon;
+        /*  align-items: center;                      */
+           
+                                                 
+        }
+        
+        .item{
+           /* height: 100px;
+            width: 100px; */
+           margin: 3px;
+            background-color: yellowgreen;
+            border: 2px solid green;
+            padding:15px 10px;           
+        }
+        .box:first-child{
+          /*  grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;  */
+           grid-column: 1 / span 3;  
+        }
+        .item-1{
+            grid-row:1/2;
+            grid-column:1/2;   
+         
+        }
+          .item-4{
+       /* grid-row:1/2;
+        grid-column:1/2; */
+         /*   grid-column:doosra/tisra; 
+                      OR
+         */
+        /*   grid-row-start:1;
+            grid-column-end:2;  */
+          
+        }  
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">This is Item-1</div>
+        <div class="item item-2">This is Item-2</div>
+        <div class="item item-3">This is Item-3</div>
+        <div class="item item-4">This is Item-4</div>
+        <div class="item">This is Item-5</div>
+        <div class="item">This is Item-6</div>
+        <div class="item">This is Item-7</div>
+        <div class="item">This is Item-8</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-10</div>
+        <div class="item">This is Item-11</div>
+        <div class="item">This is Item-12</div>
+        <div class="item">This is Item-13</div>
+        <div class="item">This is Item-14</div>
+        <div class="item">This is Item-15</div>
+        <div class="item">This is Item-16</div>
+       
+
+    </div>
+
+
+</body>
+</html>

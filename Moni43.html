@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Constructor function</title>
+</head>
+<body>
+    <script>
+        function Audio (fileLocation){
+            this.filelocation =fileLocation;
+            this.play= function(){
+                // Tap into the audio hardware
+                // check the file at fileLocation exists
+                // Check the file at fileLocation is a sound file
+                // Play the file at fileLocation
+            }
+        }
+
+        document.addEventListener("keypress",function(){
+            alert("Key is Pressed");
+
+        });
+
+        document.addEventListener("keypress",function(event){
+           console.log(event);
+            alert("Key is Pressed");
+
+        });
+
+        function anotherAddEventListener(typeOfEvent,callback){
+            //Detect Event Function
+
+            var eventThatHappened ={
+                eventType:"Keypress",
+                key:"p",
+                durationOfKeypress:2
+            }
+
+            if(eventThatHappened.eventType==typeOfEvent){
+                callback(eventThatHappened);
+            }
+        }
+
+        debugger:
+        anotherAddEventListener("keypress",function(event){
+          event={eventType:"keypress", key:"p", durationOfKeypress:2}
+        })
+
+    </script>
+</body>
+</html>

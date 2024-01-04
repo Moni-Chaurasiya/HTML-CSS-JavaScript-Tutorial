@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title> 
+    <style>
+        .box{
+            height:50px;
+            width:55px;
+            border:2px solid yellowgreen;
+            margin:5px;
+            padding: 5px;
+        }
+        .box1{
+            height:50px;
+            width:55px;
+            border:2px solid yellowgreen;
+            margin:5px;
+            padding: 5px;
+        }
+        .box2{
+            height:50px;
+            width:55px;
+            border:2px solid yellowgreen;
+            margin:5px;
+            padding: 5px;
+        }
+    </style> 
+</head>
+<body> 
+    <div id="main" class="container">
+        <ul id="nav">
+        <li>Home</li>
+        <li>About</li>
+        <li>Service</li>
+        <li>More About us</li>
+        <li>Contact Us</li>
+        </ul>
+    </div> 
+    <div class="container2">
+        Another Container
+        <div class="box1" style="display:flex" data-createdby="Moni">box1</div>
+        <div id="bluebox" class="box">box2</div>
+        <div class="box2" style="display:flex">box3</div>
+        <div class="box">box4</div>
+    </div>
+    <script>
+        //DOM --> Document Object Module
+
+        document.getElementById("bluebox").style.backgroundColor="blue"
+        document.querySelector(".box").style.border="2px solid red" //only apply on first matched box
+        document.querySelectorAll(".box").forEach(e =>{
+            e.style.border="2px solid pink" 
+        })
+
+    
+        
+        //  document.querySelector(".container").innerText
+        //  'Home\nAbout\nService\nMore About us\nContact Us'
+
+        //  document.querySelector(".container2").innerText
+        //  'Another Container\nbox1\nbox2\nbox3\nbox4'
+
+        //  document.querySelector(".container2").outerText
+        //  'Another Container\nbox1\nbox2\nbox3\nbox4'
+
+        //  document.querySelector(".container2").outerHTML
+        //  '<div class="container2">\n        Another Container\n        <div class="box" style="border: 2px solid pink;">box1</div>\n        <div id="bluebox" class="box" style="background-color: blue; border: 2px solid pink;">box2</div>\n        <div class="box" style="border: 2px solid pink;">box3</div>\n        <div class="box" style="border: 2px solid pink;">box4</div>\n    </div>'
+       
+        //  document.querySelector(".container").tagName
+        //  'DIV'
+       
+        //  document.querySelector(".container2").nodeName
+        //  'DIV'
+       
+        //  document.querySelector(".container").textContent
+        //  '\n        \n        Home\n        About\n        Service\n        More About us\n        Contact Us\n        \n    '
+       
+        //  document.querySelector(".container").hidden
+        //  false
+        
+        //  document.querySelector(".container").hidden="true"
+        //  'true'
+
+        //  document.querySelector(".container2").innerHTML="Hey I am Moni"
+        //  'Hey I am Moni'
+
+        //  document.querySelector(".container2").hasAttribute("style")
+        //  false
+
+        //  document.querySelector(".box1").hasAttribute("style")
+        //  true
+
+        //  document.querySelector(".box1").getAttribute("style")
+        //  'display:flex'
+
+        //  document.querySelector(".box2").setAttribute("style", "display:inline")
+
+        //  document.querySelector(".box2").removeAttribute("style")
+
+        //  document.designMode="on"
+        //  'on'
+
+        //  document.querySelector(".box1").dataset
+        //  DOMStringMap {createdby: 'Moni'}
+
+        //  document.querySelector(".box").classList.toggle("red")
+
+
+
+        document.title="Moni is Excellent";
+        console.log(document.title)
+        console.log(document.body)
+        document.body.style.backgroundColor="green";
+
+        let main = document.getElementById("main");
+        console.log(main);
+
+        let nav = document.getElementById("nav");
+        console.log(nav);
+
+        let container = document.getElementsByClassName("container");
+        console.log(container);
+
+        let sels = document.querySelector(".container");
+        console.log("Selector returns",sels);
+
+        let sel = document.querySelectorAll("#nav>li");
+        console.log("Selector returns",sel);
+
+
+        let div=document.creatElement("div");
+        div.innerHTML="I  have been inserted <b>by Moni<b>"
+        div.setAttribute("class","created");
+        document.querySelector(".contaner2").append(div);
+        
+        
+        let cont=document.querySelector(".container")
+        cont.insertAdjacentHTML("beforebegin","<b> I am Moni Chaurasiya <b>")
+    </script>
+  
+</body>
+</html>

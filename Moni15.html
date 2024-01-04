@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and z-index</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 150px;
+            border: 2px solid black;
+        }
+        #box1{ 
+            background-color:aqua;
+            position:relative;
+            top: 79px;  
+            z-index: 200; /* whose z-index is more that box will come upper */   
+        }
+        #box2{
+            position:relative;
+            top: 14px;
+            z-index: 135;
+            /* z-index will work only for position: relative, absolute, fixed or sticky */
+
+            /* display:none; */      
+            /* It work the same as visibility hidden but will not reserve the place */
+            /* visibility: hidden; */
+            /* it will hide the box and reserve the empty space
+               by default it will be visible */
+             background-color:palevioletred;
+        }
+        #box3{ background-color:rgb(0, 255, 89);}
+        #box4{ background-color:rgb(255, 3, 28);}
+
+    </style>
+</head>
+<body>
+    <!-- div.box#box$*4--shortcut to create 4 div and give class whose name is box -->
+     <!-- and give id whose name is box1 ,box2,box3,box4 -->
+     <div class="box" id="box1"></div>
+     <div class="box" id="box2"></div>
+     <div class="box" id="box3"></div>
+     <div class="box" id="box4"></div>
+</body>
+</html>

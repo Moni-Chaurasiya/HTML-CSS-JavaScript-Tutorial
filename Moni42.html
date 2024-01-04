@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListener, Object,switch</title>
+
+    <style>
+        .Moni{
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <button class="Moni">M</button>
+    <button class="Moni">O</button>
+    <button class="Moni">N</button>
+    <button class="Moni">I</button>
+    <button class="Moni">C</button>
+
+ 
+
+
+
+
+    <script>
+          /*  document.querySelector("button").addEventListener("click" , handleclick);
+            function handleclick(){
+                alert("I got click")
+            }  */
+
+
+           //  document.querySelector("button").addEventListener("click" ,  function() {
+           //     alert("I got click");
+           //  });
+
+          var numberOfMoniButton = document.querySelectorAll(".Moni").length;
+
+         /*   for(var i = 0; i<numberOfMoniButton; i++){
+
+              //  document.querySelectorAll(".Moni")[i].addEventListener("click" ,  function() {
+              //      alert("I got click");
+              //  });
+
+            }      */
+
+            for(var i = 0; i<numberOfMoniButton; i++){
+
+                document.querySelectorAll(".Moni")[i].addEventListener("click" ,  function() {
+                  //  var audio = new Audio("ton-1.mp3")
+                  //  audio.play();
+                //  console.log(this.innerHTML);
+                this.style.color ="blue";
+
+                });
+
+
+            }
+            document.querySelectorAll(".Moni")[i].addEventListener("click" ,  function() {
+
+            var buttonInnerHTML = this.innerHTML;
+
+            makeSound(buttonInnerHTML);
+            buttonAnimation(buttonInnerHTML);
+            });
+
+            switch (buttonInnerHTML){
+                case"M":
+                var ton2 = new Audio("ton-1.mp3");
+                ton2.play();
+                break;
+
+                case"O":
+                var snare = new Audio("ton-2.mp3");
+                snare.play();
+                break;
+
+                case"N":
+                var crash = new Audio("ton-3.mp3");
+                crash.play();
+                break;
+
+                case"I":
+                var kick = new Audio("ton-4.mp3");
+                kick.play();
+                break;
+
+                case"C":
+                var audio = new Audio("ton-5.mp3");
+                audio.play();
+                break;
+
+                default:console.log("Default")
+            }
+            
+
+            //Keyboard Press
+
+            document.addEventListener("keypress",function(event){
+               // alert("Key is Pressed");
+               makeSound(event,key);
+
+               buttonAnimation(event.key);
+
+            });
+
+            function makeSound(key){
+
+                switch (key){
+                    case"M":
+                    var ton2 = new Audio("ton-1.mp3");
+                    ton2.play();
+                    break;
+    
+                    case"O":
+                    var snare = new Audio("ton-2.mp3");
+                    snare.play();
+                    break;
+    
+                    case"N":
+                    var crash = new Audio("ton-3.mp3");
+                    crash.play();
+                    break;
+    
+                    case"I":
+                    var kick = new Audio("ton-4.mp3");
+                    kick.play();
+                    break;
+    
+                    case"C":
+                    var audio = new Audio("ton-5.mp3");
+                    audio.play();
+                    break;
+    
+                    default:console.log("Default")
+                }
+            }
+
+          document.addEventListener("keypress",respondToKey(event));
+          function respondToKey(event){
+            console.log("Key pressed.");
+
+
+          }    
+
+        function buttonAnimation(currentkey)  {
+            var activeButton =document.querySelector(","+currentkey);
+            activeButton.classList.add("pressed")
+            setTimeout(function(){
+                activeButton.classList.remove("pressed")
+            },100)
+        }
+          
+          
+     
+    </script>
+    
+</body>
+</html>

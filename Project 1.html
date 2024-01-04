@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moni Fitness</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Balloo+Bhai&display=swap" rel="stylesheet">
+<style>
+    /*Css reset*/
+    body {
+
+        margin: 0px;
+        padding: 0px;
+        background: url('GymWorkout.jpg');
+        background-repeat: no-repeat;
+        background-size: 1550px 1200px;
+
+    }
+
+    .left {
+        color: aliceblue;
+        /*border: 2px solid blue;*/
+        position: absolute;
+        left: 34px;
+        display: inline-block;
+        top: 20px;
+        font-size: 25px;
+
+    }
+
+    .left img {
+        width: 90px;
+        height: 80px;
+        /*filter: invert(100);*/
+
+        padding-left: 20px;
+    }
+
+    .right {
+        color: aliceblue;
+        position: absolute;
+        right: 34px;
+        display: inline-block;
+        /*border: 2px solid yellow;*/
+        top: 20px;
+    }
+
+    .mid {
+        color: aliceblue;
+        /*border: 2px solid green;*/
+        display: block;
+        margin: 12px auto;
+        width: 50%;
+        top: 20px;
+    }
+
+    .navbar {
+        display: inline-block;
+        font-family: 'arial' 'cursive';
+
+    }
+
+    .navbar li {
+        display: inline-block;
+        color: yellow;
+    }
+
+    .navbar li a {
+        color: yellow;
+        text-decoration: none;
+        padding: 30px;
+        font-size: 24px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        color: skyblue;
+        text-decoration: underline;
+    }
+
+    .btn {
+        margin: 10px;
+        background-color: black;
+        color: pink;
+        padding: 6px 3px;
+        border: 2px solid red;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 20px;
+
+
+    }
+
+    .btn:hover {
+        background-color: blue;
+    }
+
+    .container {
+        color: yellow;
+        border: 2px solid rgb(199, 232, 199);
+        margin: 120px 70px;
+        padding: 50px 70px;
+        width: 40%;
+        border-radius: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 'cursive';
+    }
+
+    .container input {
+        padding: 1px;
+        margin: 3px auto;
+        border: 2px solid black;
+        width: 360px;
+        border-radius: 8px;
+        text-align: center;
+        display: block;
+        font-size: 20px;
+
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+
+    .container button {
+        width: 45%;
+        display: block;
+        margin: auto;
+        background-color: black;
+        color: pink;
+        padding: 6px 3px;
+        border: 2px solid red;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="GymLogo.jpg" alt="">
+            <div>Moni Fitness</div>
+        </div>
+        <!-- right box for buttons -->
+        <div class="right">
+            <button class="btn">call us now</button>
+            <button class="btn">Email Us</button>
+        </div>
+        <!-- mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the best gym of Mumbai now</h1>
+        <form action="noaction.php">
+            <div class="font-group">
+                <input type="text" name="" placeholder="Enter your name">
+            </div>
+            <br>
+            <div class="font-group">
+                <input type="text" name="" placeholder="Enter your age">
+            </div>
+            <br>
+            <div class="font-group">
+                <input type="text" name="" placeholder="Enter your gender">
+            </div>
+            <br>
+            <div class="font-group">
+                <input type="text" name="" placeholder="Enter your locality">
+            </div>
+            <br>
+            <div class="font-group">
+                <input type="text" name="" placeholder="Enter your phone no">
+            </div>
+            <br>
+            <div class="font-group">
+                <input type="text" name="" placeholder="Enter your email id">
+            </div>
+            <br>
+            <button class="button">Submit</button>
+        </form>
+    </div>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psudo and selector before and after</title>
+    <style>
+        body{
+           /* background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+          /*  background-repeat: no-repeat;*/
+           
+            margin:0;
+            padding:0;
+            color : yellowgreen;
+            background-color: black;
+        }
+        header::before{
+            background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+            content:"";
+             position:absolute;
+             top:0;
+             left:0;
+             width:100%;
+             height:100%;
+              z-index:-1;
+              opacity: 0.2;
+        }
+        .navigation{
+           
+            display:flex;
+            font-size: 20px;
+        }
+        li{
+            list-style: none;
+            padding: 34px 34px;
+        }
+       section{
+        font-family: 'Bree Serif', 'serif';
+        margin: 3px 230px;
+       display:flex;
+       flex-direction:column;
+       align-items: center;
+       justify-content: center;
+       }
+       section::before{
+        content: "This is a content"
+       }
+       h3{
+        font-size: 3rem;
+       }
+       p{
+        text-align: center;
+       }
+
+       .item:first-child{
+         background-color: rgb(134, 219, 252);
+       }
+       .box::first-line{
+        color:blue;
+       }
+
+       .paragraph *{
+               color: rgb(157, 5, 79);
+       }
+
+       a,[data-color="primary"]{
+        border:2px solid magenta;
+       }
+
+       .item:nth-child(even){
+        background-color: yellow;
+       }
+       ::selection{
+        background-color: white;
+       }
+       .item::first-letter{
+         font-size: 30px;
+         color:red;
+       }
+
+       input::placeholder{
+         color: blue;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+                <input type="text" placeholder="Type Your Name Here">
+               
+            </ul>
+        </nav>
+    </header>
+        <section class="paragraph">
+            <h3>Welcome to coding world</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam aperiam laudantium, optio repellendus tempora soluta cum itaque enim fugiat <br>nesciunt libero repellat quod non tenetur iste tempore? Amet, repudiandae quibusdam!</p>
+        </section>
+        <div class="box">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, repellat illum mollitia nisi repellendus quos modi magnam itaque molestiae! Sunt nihil temporibus ullam hic amet facilis voluptatum, sint eos quidem fugiat explicabo totam distinctio nulla soluta quae repellendus mollitia aliquid assumenda inventore reiciendis. Expedita nesciunt velit facilis dicta ullam asperiores dignissimos, quos quia. Molestiae dolor rerum debitis fuga recusandae praesentium atque provident iusto rem delectus mollitia harum illum quo veritatis officia necessitatibus quaerat commodi nihil voluptatum voluptatem odit ullam, ad ea. Recusandae officia voluptas cum repellendus excepturi doloremque explicabo, blanditiis, ullam distinctio iure quisquam tempora quidem possimus facilis accusantium autem.
+        </div>
+        <div data-color="primary">
+            Hey! My name is Moni Chaurasiya
+             
+        </div>
+        <a>I am a College Student</a>
+    <hr>
+</body>
+</html>

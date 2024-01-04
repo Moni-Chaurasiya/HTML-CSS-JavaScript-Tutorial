@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /*Id  Selector*/
+        #redElement{
+            color:red;
+            background-color: yellow
+           
+        }
+        /*Element Selector*/
+        p{
+            Border: 2px solid red;
+        }
+        article{
+            color:rgb(71, 6, 132);
+        }
+        /*Child Selector*/
+        div > p {
+            color:blue;  /* direct child*/
+            background-color: yellowgreen;
+        }
+
+        /* Class Selector*/
+        .blueElement{
+            color:blue;
+        }
+        /*Descendant Selector*/
+        div p{         
+            background-color: hotpink;  /*This will apply on all paragraph under div*/
+        }
+        /*Grouping selector*/
+        footer,span{
+            background-color: rgb(75, 2, 39);
+        }
+        /*Universal Selector*/
+        *{
+            margin:0;
+            padding:0;
+        }
+        /*Pseudo Selector*/
+        a:visited{
+            color: red;
+        }
+        a:link{
+            color:green;
+        }
+        a:active{
+            color: rgb(214, 77, 100);
+            background-color: yellowgreen;
+        }
+        a:hover{
+            background-color: aqua;
+        }
+        p:first-child{
+             background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>Moni Chaurasiya</p>
+        <p>Soni Chaurasiya</p>
+    </main>
+    <h3>CSS Selectors</h3>
+    <p>This is a simple paragraph to demonstrate css selectors</p>
+    <p id="redElement">This is a another simple paragraph to demonstrate css selectors</p>
+    <div>
+    <p class="blueElement">This is yet another simple paragraph to demonstrate css selectors</p>
+    <span> I am 18 years old</span>
+    <main><p>This is all about CSS</p></main>
+    <p>My name is Moni Chaurasiya</p>
+    </div>
+    <footer>Myself Moni Chaurasiya</footer>
+    <article>This is my Laptop</article>
+
+    <a href="https://www.google.com">Go to google</a>
+    
+</body>
+</html>

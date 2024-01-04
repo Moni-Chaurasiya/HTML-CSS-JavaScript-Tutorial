@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text shadow and Overflow</title>
+    <style>
+   .container{
+    display:flex;
+}
+.card{
+    margin: 20px 25px;
+    padding: 23px 12px;
+    border: 2px solid red;
+    background-color: burlywood;
+    box-shadow:8px 6px 7px 13px yellowgreen; /* -8px -6px yellowgreen will make shadow on upper and left.
+     7px is a blur radius and 13px is a spread radius */
+     box-shadow: -7px -5px 6px 10px rgba( 71,172,172,0.4);/* 0.4 is a lightness and darkness*/
+     box-shadow: inset 3px 5px gold; /* inset is inner shadow*/
+     box-shadow: 3px 5px rgb(237, 104, 126),14px 10px yellowgreen;
+}
+.card h2{
+    text-shadow: 2px 2px 1px red;  /* 1px is a blur radius and -2px -2px will make shadow on top and left*/
+
+}
+.box{
+    width:20vw;
+    height:10vh;
+    border:2px solid greenyellow;
+    overflow:scroll;
+    /*overflow: auto*/
+    white-space: nowrap;
+    text-overflow:ellipsis;
+   /* overflow:clip;  */      /* cannot scroll*/
+    overflow -x: hidden;
+    overflow -y: scroll;
+    overflow: hidden auto; /*hidden in x , auto in y*/
+    overflow: scroll auto; /*auto will put scroll bar only when required*/
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>This is HTML course</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut autem dolor, nam quibusdam aliquam tempora nostrum fuga, ratione esse ea quod ipsa, eveniet pariatur doloremque enim? Vitae earum ipsum ducimus!</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>This is C++ course</h2>
+            <p> We have started c++ course it doesn't mean that we will stop this course. we will complete this course for completion . Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut autem dolor, nam quibusdam aliquam tempora nostrum fuga, ratione esse ea quod ipsa, eveniet pariatur doloremque enim? Vitae earum ipsum ducimus!</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>card3</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut autem dolor, nam quibusdam aliquam tempora nostrum fuga, ratione esse ea quod ipsa, eveniet pariatur doloremque enim? Vitae earum ipsum ducimus!</p>
+        </div>
+        <div class="card" id="card4">
+            <h2>card4</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut autem dolor, nam quibusdam aliquam tempora nostrum fuga, ratione esse ea quod ipsa, eveniet pariatur doloremque enim? Vitae earum ipsum ducimus!</p>
+        </div>
+    </div>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus consequatur dicta soluta, quidem nesciunt optio eos, mollitia veritatis possimus veniam voluptatum omnis? Hic, facilis totam rerum voluptatum distinctio vero! Facilis molestias ea asperiores ullam consectetur sint, corrupti at odio quae deserunt quidem laudantium veritatis? Laboriosam!</p>
+    </div>
+</body>
+</html>

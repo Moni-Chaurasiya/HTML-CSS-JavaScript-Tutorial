@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo selectors & more designing</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            background: greenyellow;
+            margin: 34px ;
+            padding: 20px;
+            width:auto;
+        }
+        a{
+            text-decoration: none; /* Remove underline from text */
+            color: black;
+            /*border: black;*/
+          
+        }
+        /* It show the change when we move our arrow on button */
+        a:hover{
+            color:brown;
+            background-color: aquamarine;
+            
+        }
+        a:visited{
+            background-color:yellow;
+        }
+        a:active{
+            background-color: rgb(106, 106, 243);
+        }
+        .btn{
+            background-color: blueviolet;
+            padding: 5px;
+            border: 2px solid black;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 8px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        .btn:hover{
+            color:brown;
+            background-color: aquamarine;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio exercitationem ut, provident neque doloremque laborum nobis ducimus, necessitatibus ea, deleniti et dolore modi sit dolorum. Amet velit, dolores non totam placeat voluptatibus ea illum, harum beatae, labore iure. Sit, tempora.</p>
+        <a href="https://yahoo.com" class="btn">Read me</a>
+        <button class="btn">Contact us</button>
+
+    </div>
+</body>
+</html>

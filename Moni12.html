@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        .navbar {
+            background-color:black;
+            border-radius: 20px;
+
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            padding: 6px;
+         
+            margin: 15px;
+        }
+        .navbar li a{
+            text-decoration: none;
+            padding: 3px 3px;
+            color: white;
+        
+        }
+        .navbar li a:hover{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: red;
+        }
+        .navbar input{
+            border:2px solid rgb(154, 236, 254);
+            width: 150px;
+            border-radius:18px;
+            padding: 3px 27px;
+        }
+        .search{
+            float: right;
+            color: whitesmoke;
+           /* padding: 12px 95px; */
+           padding-top:20px;
+           padding-bottom: 15px; 
+           padding-right: 300;
+
+        }
+        div ul li{
+          /*  list-style:none; */
+          list-style:devanagari;
+          background-color: aqua;
+          list-style-position:inside;
+          border:2px solid red;
+          outline-color: blueviolet;
+          list-style-image:url("https://i.imgur.com/jMyOape.gif");
+          list-style:disc inside url("https://i.imgur.com/jMyOape.gif");
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search this website"> 
+                </div>
+            </ul>
+
+        </nav>
+    </header>
+    <div>
+        <ul>
+            <li>About</li>
+            <li>Home</li>
+            <li>Help</li>
+
+        </ul>
+    </div>
+
+</body>
+
+</html>

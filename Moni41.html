@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented Programming</title>
+</head>
+<body>
+    <script>
+   //   let obj ={
+   //         a: 1,
+   //         b: "Moni"
+   //     }
+
+   //     console.log(obj);
+
+   //     let animal={
+   //         eats: true
+   //     };
+   //     let rabbit={
+   //         jumps: true
+   //     };
+
+   //     rabbit._proto_ =animal; // sets rabbit.[[Prototype]] = animal -->
+
+   class animal{
+    constructor(name){
+        this.name=name;
+        console.log("Object is created...")
+    }
+
+    eats(){
+        console.log("Kha rahi hu");
+    }
+    jumps(){
+        console.log("Kud rahi hu")
+    }
+   }
+
+   class Lion extends animal{
+    constructor(name){
+       // this.name=name;
+        super(name)
+        console.log("Object is created and he is a lion...")
+    }
+   
+
+   eats(){
+    super.eats()
+    console.log("Kha rahi hu roar");
+     } 
+    
+}
+
+   let a= new animal("bunny");
+   console.log(a)
+
+   let l= new Lion("Sheru")
+   console.log("l")
+
+
+    </script>
+    <script src="Moni41.js"></script>
+</body>
+</html>
